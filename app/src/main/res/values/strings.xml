@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">EShop</string>
+    <string name="app_name_cn">在线商城</string>
+
+    <string name="goods1_name">桌子</string>
+    <string name="goods2_name">椅子</string>
+    <string name="goods3_name">沙发</string>
+
+    <string name="price">价格:</string>
+</resources>
