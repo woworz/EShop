@@ -1,9 +1,14 @@
-package com.example.eshop;
+package com.example.eshop.activity;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import android.widget.ListView;
+
+import com.example.eshop.GoodsAdapter;
+import com.example.eshop.R;
+import com.example.eshop.model.Goods;
+
 import java.util.ArrayList;
 
 public class GoodsActivity extends AppCompatActivity {

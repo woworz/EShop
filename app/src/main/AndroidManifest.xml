@@ -22,7 +22,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".GoodsActivity"
+        <activity android:name=".activity.GoodsActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

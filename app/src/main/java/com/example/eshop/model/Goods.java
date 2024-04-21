@@ -1,4 +1,4 @@
-package com.example.eshop;
+package com.example.eshop.model;
 
 public class Goods {
     private String name;
