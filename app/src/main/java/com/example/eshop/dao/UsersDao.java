@@ -7,10 +7,10 @@ import android.database.sqlite.SQLiteDatabase;
 
 import com.example.eshop.helper.UserDbHelper;
 
-public class UserDao {
+public class UsersDao {
     private SQLiteDatabase database;
 
-    public UserDao(Context context) {
+    public UsersDao(Context context) {
         UserDbHelper dbHelper = new UserDbHelper(context);
         database = dbHelper.getWritableDatabase();
     }

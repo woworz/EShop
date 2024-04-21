@@ -7,13 +7,13 @@ import android.widget.EditText;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.eshop.R;
-import com.example.eshop.dao.UserDao;
+import com.example.eshop.dao.UsersDao;
 
 public class RegisterActivity extends AppCompatActivity {
     private EditText usernameEditText;
     private EditText passwordEditText;
     private Button registerButton;
-    private UserDao userDao;
+    private UsersDao usersDao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +26,7 @@ public class RegisterActivity extends AppCompatActivity {
         registerButton = findViewById(R.id.register_button);
 
         // 初始化 UserDao
-        userDao = new UserDao(this);
+        usersDao = new UsersDao(this);
 
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,13 +41,13 @@ public class RegisterActivity extends AppCompatActivity {
                 }
 
                 // 检查用户名是否已存在
-                if (userDao.checkUserExists(username)) {
+                if (usersDao.checkUserExists(username)) {
                     Toast.makeText(RegisterActivity.this, "用户名已存在", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
                 // 注册新用户
-                long result = userDao.addUser(username, password);
+                long result = usersDao.addUser(username, password);
                 if (result != -1) {
                     // 注册成功
                     Toast.makeText(RegisterActivity.this, "注册成功", Toast.LENGTH_SHORT).show();
